@@ -5,6 +5,10 @@ import re
 
 app = Flask(__name__)
 
+@app.route("/", methods=["GET"])
+def home():
+    return "Welcome to the SSC Score Calculator API! Please use /calculate to calculate the score."
+
 @app.route("/calculate", methods=["POST"])
 def calculate_score():
     data = request.get_json()
