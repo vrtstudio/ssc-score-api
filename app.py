@@ -51,3 +51,6 @@ def calculate_score():
 
 if __name__ == "__main__":
     app.run()
+if __name__ == "__main__":
+    # Only run this locally
+    app.run(debug=True)
