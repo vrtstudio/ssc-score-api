@@ -19,7 +19,7 @@ def calculate_score():
     with open("temp.pdf", "wb") as f:
         f.write(response.content)
 
-    # Extract text
+    # Extract text from PDF
     doc = fitz.open("temp.pdf")
     text = ""
     for page in doc:
@@ -50,7 +50,4 @@ def calculate_score():
     })
 
 if __name__ == "__main__":
-    app.run()
-if __name__ == "__main__":
-    # Only run this locally
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
